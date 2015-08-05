@@ -74,8 +74,8 @@
 	Choice of Quadrature rule affects accuracy
 	\begin{table}[htbp]
 		\centering
-		\begin{tabular}{l|l}Rectangle & \( L_d(q_0,q_1) =L(q_0,\frac{q_1-q_0}{h}) h \)  \\ \hline
-		Midpoint & \( L_d(q_0,q_1) = L(\frac{q_0 + q_1}{2},\frac{q_1 - q_0}{h}) h \) \\ \hline
+		\begin{tabular}{l|l}Rectangle & \( L_d(q_0,q_1) =L(q_0,\frac{q_1-q_0}{h}) h \)  \\ \hline \hline
+		Midpoint & \( L_d(q_0,q_1) = L(\frac{q_0 + q_1}{2},\frac{q_1 - q_0}{h}) h \) \\ \hline \hline
 		Trapezoidal & \( L_d(q_0, q_1) = \frac{1}{2} \left[ L(q_0, \frac{q_1 - q_0}{h} ) + L(q_1, \frac{q_1 - q_0 }{h} )\right] h \)
 		\end{tabular} 
 	\end{table}
@@ -87,24 +87,26 @@
 	
 \end{frame} %--------------------------------------------%
 
-\begin{frame} %---------------------------------------------------%
+\begin{frame}[t] %---------------------------------------------------%
 \frametitle{Integrator Comparison}
 	\begin{itemize}
 		\item Numerical Simulation of PCRTBP (\( t_f = 200 \approx 15 \) years)
 			\begin{itemize}
 				\item Variable step Runge-Kutta method (\texttt{ode45.m})
 				\item Variational integrator \( \bar{x}_k \to \bar{x}_{k+1} \)
-			\end{itemize}
-		\item Energy drift behavior 
+			\end{itemize} 
 	\end{itemize}
 \begin{figure} 
 	\centering 
-	\begin{subfigure}[h]{0.5\textwidth} 
+	\begin{subfigure}[t]{0.4\textwidth} 
 		\includegraphics[width=\textwidth]{./integrator_compare/trajectory} 
 	\end{subfigure}~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. %(or a blank line to force the subfigure onto a new line) 
-	\begin{subfigure}[htbp]{0.5\textwidth} 
+	\begin{subfigure}[t]{0.4\textwidth} 
 		\includegraphics[width=\textwidth]{./integrator_compare/energy} 
 	\end{subfigure} 
 	\end{figure}
-
+	\pause
+	\begin{beamercolorbox}[sep=0.2cm,center]{numerical}
+		Does not preserve Jacobi integral 
+  	\end{beamercolorbox}
 \end{frame} %------------------------------------------------------%

@@ -26,33 +26,36 @@
 			\item Numerical Instability and Energy drift
 			\item Difficult to capture effects of low-thrust propulsion
 		\end{itemize}
-	
+	\item Invariant Manifolds
+		\begin{itemize}
+			\item Associated with periodic orbits
+			\item Control-free and transfers require manifolds to intersect
+		\end{itemize}
 \end{itemize}
 \end{frame}   %-----------------------------%
 
-\begin{frame} %-----------------------------%
-\frametitle{Previous Work}
-\framesubtitle{Challenges}
-\begin{itemize}
-	\item Invariant manifolds of three-body problem used for transfers
-	\item Generated from periodic orbits in three-body problem
-	\item Results are case specific and difficult to generalize
-	\item Control-free and dependent on intersections of manifolds
-	\item Long time of flight not conducive for time critical missions
-	
-	\includegraphics[height=0.3\textheight]{U4_Manifolds}
-	\hfill
-	\includegraphics[height=0.3\textheight]{U4_poincare}
-\end{itemize}
-\end{frame} %--------------------------------%
+%\begin{frame} %-----------------------------%
+%\frametitle{Previous Work}
+%\framesubtitle{Challenges}
+%\begin{itemize}
+%	\item Invariant manifolds of three-body problem used for transfers
+%	\item Generated from periodic orbits in three-body problem
+%	\item Results are case specific and difficult to generalize
+%	\item Control-free and dependent on intersections of manifolds
+%	\item Long time of flight not conducive for time critical missions
+%	
+%	\includegraphics[height=0.3\textheight]{U4_Manifolds}
+%	\hfill
+%	\includegraphics[height=0.3\textheight]{U4_poincare}
+%\end{itemize}
+%\end{frame} %--------------------------------%
 
 \begin{frame} % -----------------------------------%
-\frametitle{Approach}
-
+\frametitle{Technical Approach}
 		\begin{itemize}
 			\item Extend invariant manifold concept with low-thrust control  
 			\item Variational integrator allows for accurate and stable computation
-			\item Computational geometric optimal control formed to generate reachable set
-			\item Reachability set on Poincar\'e section
+			\item Computational geometric optimal control used to generate reachable set
+			\item Reachability set on Poincar\'e section allows for transfer design
 		\end{itemize}
 \end{frame} %--------------------------------------%

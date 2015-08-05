@@ -7,7 +7,7 @@
 \begin{itemize}
 	\item Transfer from \( L_1 \) to region near Moon
 	\item Generate reachable set using computational geometric optimal control over fixed horizon
-	\item Invariant manifold transfer serves as baseline
+	\item Compare to transfer via invariant manifolds
 \end{itemize}
 	\begin{figure} 
 	\centering 
@@ -23,14 +23,19 @@
 \begin{frame}%------------------------------------------------%
 \frametitle{Transfer Example}
 \begin{itemize}
-	\item Reachable set is generated on Poincar\`e section
-	\item Invariant manifold does not always allow for transfer
+	\item Reachability set on Poincar\`e section
 	\item Low-thrust propulsion allows for intersection
-	\item Intersection state ( \( \bar{x}_t \)) and Jacobi integral used to determine optimal transfer
+	\item Portion of unstable manifold does not intersect
+	\item Invariant manifold has longer time of flight than reachable set \( t_f \approx 3.1 \) vs. \( t_f \approx 1.4 \)
 \end{itemize}
-\begin{figure}
-	\includegraphics[width=0.5\textwidth]{poincare_compare}
-\end{figure}
-	Reachable set TOF = 1.4
-	Invaraint Manifold TOF = 3.1
+	\begin{figure} 
+	\centering 
+	\begin{subfigure}[htbp]{0.5\textwidth} 
+		\includegraphics[width=\textwidth]{reach_trajectory}  
+	\end{subfigure}~
+	\begin{subfigure}[htbp]{0.5\textwidth} 
+		\includegraphics[width=\textwidth]{poincare_compare} 
+	\end{subfigure} 
+	\end{figure}
+
 \end{frame} %--------------------------------------------------%
