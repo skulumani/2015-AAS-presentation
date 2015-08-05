@@ -1,0 +1,38 @@
+\section*{}
+\subsection*{Optimal Control}
+\begin{frame} %-----------------------------%
+\frametitle{Reachability Set}
+  \begin{itemize}
+  \item Generate reachable set on Poincar\'e section
+  \begin{equation*}
+	J = -\frac{1}{2} \left( \bar{x}(N) - \bar{x}_{n}(N)\right)^T 
+	Q_f
+	\left( \bar{x}(N) - \bar{x}_{n}(N)\right)
+	\label{eq:cost}
+\end{equation*}
+  \item Poincar\'e section intersection is enforced by terminal constraints
+ \begin{subequations}
+\begin{align*}
+	m_1 &= 0 = \frac{y(N) - L_{1y}}{x(N) - L_{1x}} - \tan{\alpha_d} \\ 
+    m_2&= 0 = \frac{\dot{x}(N) - \dot{x_n}(N) }{x(N) -x_n(N) } - \tan{\theta_d} \\
+	 0 &\geq\bar{u}^T \bar{u} - u_{max}^2 
+\end{align*}
+    \label{eq:constraints}
+\end{subequations}
+ \end{itemize}
+\end{frame}   %-----------------------------%
+
+\begin{frame}%--------------------------------------------%
+\frametitle{Euler-Lagrange Equations}
+\begin{itemize}
+	\item Necessary conditions for optimality are used to develop a two-point boundary value problem
+	\item Reachable set on Poincar\'e section is approximated by varying \(\theta_d\)
+\end{itemize}
+\begin{subequations}\label{eq:necc_cond}
+\begin{align*}
+	\lambda_{k+1}^T &= \lambda_k^T  \deriv{f_k}{\bar{x}_k}^{-1} \\
+	0 &=  \deriv{H_k}{\bar{u}_k} \\
+	0 &= \deriv{\phi}{\bar{x}_k}^T + \deriv{m}{\bar{x}_k}^T\beta  - \lambda^T(N) 
+\end{align*}
+\end{subequations}
+\end{frame} %-------------------------------------------------%

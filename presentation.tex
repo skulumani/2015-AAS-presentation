@@ -1,0 +1,87 @@
+%\documentclass[11pt,professionalfonts,hyperref={pdftex,pdfpagemode=none,pdfstartview=FitH}]{beamer}
+%\usepackage{times}
+\documentclass[11pt,professionalfonts]{beamer}
+\usefonttheme{serif}
+\usepackage{AAS_presentation_packages}
+\input{./tex/macros}
+
+\newcommand{\hilight}[1]{\colorbox{green}{#1}}
+
+\definecolor{mygray}{gray}{0.9}
+\definecolor{RoyalBlue}{rgb}{0.25,0.41,0.88}
+\def\Emph{\textcolor{RoyalBlue}}
+
+\definecolor{tmp}{rgb}{0.804,0.941,1.0}
+\setbeamercolor{numerical}{fg=black,bg=tmp}
+\setbeamercolor{exact}{fg=black,bg=red}
+
+\mode<presentation> 
+{
+  \usetheme{Warsaw}
+  \usefonttheme{serif}
+  \setbeamercovered{transparent}
+}
+
+\setbeamertemplate{footline}%{split theme}
+{%
+  \leavevmode%
+  \hbox{\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fill]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm]{title in head/foot}
+%    \usebeamerfont{title in head/foot}\mypaper\hfill \insertframenumber/\inserttotalframenumber
+    \usebeamerfont{title in head/foot}\hfill \insertframenumber/\inserttotalframenumber
+  \end{beamercolorbox}}%
+  \vskip0pt%
+} \setbeamercolor{box}{fg=black,bg=yellow}
+
+
+\title[AAS/AIAA Astrodynamics Specialist Conference]{\large\bf  Systematic Design of Optimal Low-Thrust Transfers for the Three-Body Problem}
+
+\author{\vspace*{-0.3cm}}
+
+%\institute{\footnotesize
+%{\normalsize Shankar Kulumani}\vspace*{0.2cm}\\
+%  Flight Dynamics and Control Lab \\ 
+%  Dept. of Mechanical and Aerospace Engineering\\ 
+%  The George Washington University \\
+%  Washington, DC\\ \vspace{10pt}
+%  June 4, 2014 \\ \vspace{10pt}
+%  }
+
+
+\institute{
+	\footnotesize
+	{\normalsize\bf{Shankar Kulumani and Taeyoung Lee}}
+	
+	\vspace*{0.2cm}
+  	\bf{Department of Mechanical \& Aerospace Engineering}\\ \vspace*{0.5cm}
+ 	\begin{figure} %figure%
+       	%\includegraphics[width=7.35cm]{gw_txt_logo2.png} % text logo
+       	\includegraphics[width=4.50cm]{gwu_logo.png} % Face logo
+  	\end{figure}
+}
+
+\date{}
+
+\begin{document}
+%=======================================================%
+
+\setcounter{framenumber}{-1} % title slide starts at 0 
+\begin{frame} %-----------------------------%
+  \titlepage
+\end{frame}   %-----------------------------%
+  
+
+\input{./tex/motivation}
+\input{./tex/previous_work}
+\input{./tex/system_model} % three body problem
+\input{./tex/variational} % geometric integrators
+\input{./tex/invariant_manifolds} % invariant manifolds and poincare section
+\input{./tex/optimal_control} % computational geometric optimal control
+\input{./tex/simulation} % numerical simulation and comparison
+\input{./tex/future_work}
+\input{./tex/questions}
+
+\end{document}
+
