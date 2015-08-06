@@ -6,13 +6,6 @@
 \frametitle{Previous Work} % small satellites
 \framesubtitle{Challenges}
 \begin{itemize}
-	\item Direct Optimal Control
-		\begin{itemize}
-			\item Reformulate problem as parameter optimization
-			\item Allows for use of nonlinear programming methods
-			\item High dimensional problem and computationally intensive
-		\end{itemize}
-	\pause
 	\item Optimal Trajectory Design
 		\begin{itemize}
 			\item Orbital dynamics are nonlinear and chaotic
@@ -20,12 +13,20 @@
 			\item Intuition required by designer
 		\end{itemize}
 	\pause
+	\item Direct Optimal Control
+		\begin{itemize}
+			\item Reformulate problem as parameter optimization
+			\item Allows for use of nonlinear programming methods
+			\item High dimensional problem and computationally intensive
+		\end{itemize}
+	\pause
 	\item Numerical Integration
 		\begin{itemize}
 			\item Typical methods use Runge-Kutta schemes
 			\item Numerical Instability and Energy drift
-			\item Difficult to capture effects of low-thrust propulsion
+			\item Difficult to capture  long-term effects of low-thrust propulsion accurately
 		\end{itemize}
+	\pause
 	\item Invariant Manifolds
 		\begin{itemize}
 			\item Associated with periodic orbits
@@ -51,11 +52,11 @@
 %\end{frame} %--------------------------------%
 
 \begin{frame} % -----------------------------------%
-\frametitle{Technical Approach}
+\frametitle{Proposed Approach}
 		\begin{itemize}
 			\item Extend invariant manifold concept with low-thrust control  
 			\item Variational integrator allows for accurate and stable computation
 			\item Computational geometric optimal control used to generate reachable set
-			\item Reachability set on Poincar\'e section allows for transfer design
+			\item Reachability set on Poincar\'e section allows for systematic transfer design
 		\end{itemize}
 \end{frame} %--------------------------------------%

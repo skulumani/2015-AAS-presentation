@@ -3,6 +3,13 @@
 \subsection*{Variational Integrator}
 \begin{frame} %------------------------------------%
 \frametitle{Variational Principle}
+	\begin{itemize}
+		\item Variational Integrators
+			\begin{itemize}
+				\item Structure-preserving integrators for Hamiltonian systems
+				\item Obtained by discretizing variational principle
+			\end{itemize}
+	\end{itemize}
 	\begin{columns}[c]
 		\begin{column}{0.5\textwidth}
 			\centering
@@ -96,17 +103,17 @@
 				\item Variational integrator \( \bar{x}_k \to \bar{x}_{k+1} \)
 			\end{itemize} 
 	\end{itemize}
-\begin{figure} 
+	\begin{figure} 
 	\centering 
 	\begin{subfigure}[t]{0.4\textwidth} 
-		\includegraphics[width=\textwidth]{./integrator_compare/trajectory} 
+		\visible<2->{\includegraphics[width=\textwidth]{./integrator_compare/trajectory}} 
 	\end{subfigure}~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. %(or a blank line to force the subfigure onto a new line) 
 	\begin{subfigure}[t]{0.4\textwidth} 
-		\includegraphics[width=\textwidth]{./integrator_compare/energy} 
+		\visible<2->{\includegraphics[width=\textwidth]{./integrator_compare/energy} }
 	\end{subfigure} 
 	\end{figure}
-	\pause
-	\begin{beamercolorbox}[sep=0.2cm,center]{numerical}
-		Does not preserve Jacobi integral 
-  	\end{beamercolorbox}
+	
+	\begin{itemize}
+		\visible<2->{\item Typical integration methods do not preserve structure}
+	\end{itemize}
 \end{frame} %------------------------------------------------------%

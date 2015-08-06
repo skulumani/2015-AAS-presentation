@@ -3,23 +3,24 @@
 \begin{frame} %-----------------------------%
 \frametitle{Reachability Set}
   \begin{itemize}
-  \item Reachable set on Poincar\'e section
+  \item Reachable set on Poincar\'e section: The set of states that can be attained from a given initial state via admissable control input
+  		\begin{itemize}
+  			\item Enlarge the intersection region on the Poincar\'e section
+  		\end{itemize}
   \item \emph{Computational Geometric Optimal Control}
-  \begin{equation*}
-	J = -\frac{1}{2} \left( \bar{x}(N) - \bar{x}_{n}(N)\right)^T 
-	Q_f
-	\left( \bar{x}(N) - \bar{x}_{n}(N)\right)
-	\label{eq:cost}
-\end{equation*}
-  \item Poincar\'e section intersection is enforced by terminal constraints
-\begin{align*}
+	\begin{itemize}
+  		\item Poincar\'e section defined by \( \alpha_d \)
+		\item Direction on Poincar\'e section defined by \( \theta_d \)
+	  	\item Poincar\'e section intersection is enforced by terminal constraints
+	\end{itemize}
+ \end{itemize}
+  \begin{align*}
+	J &= -\frac{1}{2} \left( \bar{x}(N) - \bar{x}_{n}(N)\right)^T Q_f\left( \bar{x}(N) - \bar{x}_{n}(N)\right)\\
 	m_1 &= 0 = \frac{y(N) - L_{1y}}{x(N) - L_{1x}} - \tan{\alpha_d} \\ 
     m_2&= 0 = \frac{\dot{x}(N) - \dot{x_n}(N) }{x(N) -x_n(N) } - \tan{\theta_d} \\
 	 0 &\geq\bar{u}^T \bar{u} - u_{max}^2 
-\end{align*}
-	\item Poincar\`e section defined by \( \alpha_d \)
-	\item Direction on Poincar\`e section defined by \( \theta_d \)
- \end{itemize}
+	\end{align*}
+
 \end{frame}   %-----------------------------%
 
 %\begin{frame}%--------------------------------------------%
