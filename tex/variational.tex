@@ -10,6 +10,7 @@
 				\item Obtained by discretizing variational principle
 			\end{itemize}
 	\end{itemize}
+	\pause
 	\begin{columns}[c]
 		\begin{column}{0.5\textwidth}
 			\centering
@@ -39,6 +40,7 @@
 				\( \dot{q} = f \parenth{q, \dot{q} } \)
 			\end{beamercolorbox}
 		\end{column}
+		\pause
 		\begin{column}{0.5\textwidth}
 			\centering
 			\begin{beamercolorbox}[wd=0.8\columnwidth,sep=0.05cm,center]{numerical} Discrete Time \end{beamercolorbox}
@@ -105,12 +107,8 @@
 	\end{itemize}
 	\begin{figure} 
 	\centering 
-	\begin{subfigure}[t]{0.4\textwidth} 
-		\visible<2->{\includegraphics[width=\textwidth]{./integrator_compare/trajectory}} 
-	\end{subfigure}~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. %(or a blank line to force the subfigure onto a new line) 
-	\begin{subfigure}[t]{0.4\textwidth} 
-		\visible<2->{\includegraphics[width=\textwidth]{./integrator_compare/energy} }
-	\end{subfigure} 
+		\visible<2->{\includegraphics[width=0.5\textwidth]{./integrator_compare/trajectory}}% 
+		\visible<2->{\includegraphics[width=0.5\textwidth]{./integrator_compare/energy} }
 	\end{figure}
 	
 	\begin{itemize}
