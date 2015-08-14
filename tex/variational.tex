@@ -71,7 +71,13 @@
 			\end{beamercolorbox}
 		\end{column}
 	\end{columns}
-
+	
+	\note[itemize]{
+		\item Continous time - discretization occurs at end while implemented in digital computer
+		\item Discrete time - discretization occurs at the beginning. 
+		Dynamics derived in discrete time
+		\item Legendre transform allows for expression of dynamics in Hamiltonian form
+	}
 \end{frame}%-----------------------------------------%
 
 \begin{frame}[shrink=20] %------------------------------------------%
@@ -94,6 +100,9 @@
 	&+ \left. \frac{1}{2} \bracket{\left(  \frac{\xkp - \xk}{h} -\ykp \right)^2 + \left( \frac{\ykp - \yk}{h} + \xkp \right)^2} + \frac{1-\mu}{r_{1_{k+1}}} + \frac{\mu}{r_{2_{k+1}}}  \right)
 	\end{align*}
 	
+	\note[itemize]{
+		\item Apply E-L equations to discrete time Lagrangian to get discrete EOMs
+	}
 \end{frame} %--------------------------------------------%
 
 \begin{frame}[t] %---------------------------------------------------%
